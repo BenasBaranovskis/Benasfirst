@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="#000000">
+
+    <ImageView
+        android:id="@+id/ImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.60"
+        android:background="#ffffff"
+        android:src="@drawable/logo" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.08" />
+
+    <EditText
+        android:id="@+id/regusername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:hint="Username"
+        android:textColorHint="#000000" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.03" />
+
+    <EditText
+        android:id="@+id/regpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColorHint="#000000" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.03" />
+
+    <EditText
+        android:id="@+id/regemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Email"
+        android:textColorHint="#000000"
+        android:background="#ffffff"
+        android:inputType="textEmailAddress" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.08" />
+
+    <Button
+        android:id="@+id/button2reg2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1f2228"
+        android:backgroundTint="#1f2228"
+        android:text="@string/login_tgbox_login"
+        android:textColor="#ffffff" />
+
+</LinearLayout>

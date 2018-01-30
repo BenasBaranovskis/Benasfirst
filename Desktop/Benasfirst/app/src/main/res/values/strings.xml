@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">J.BOND MI6</string>
+
+    <string name="login_heading">MI6 James BOND</string>
+    <string name="login_username_txt">USERNAME:</string>
+    <string name="login_password_txt">PASSWORD:</string>
+
+    <string name="login_chbox_txt">Remember me</string>
+
+    <string name="login_tgbox_registration">Register</string>
+    <string name="login_tgbox_login">Login</string>
+    <string name="login_invalid_username">Acces denied</string>
+    <string name="login_invalid_password">Acess denied</string>
+
+</resources>

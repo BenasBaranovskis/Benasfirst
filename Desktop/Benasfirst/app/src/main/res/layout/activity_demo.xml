@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@color/colorPrimary">
+
+    <!--TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login_heading"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        android:textColor="#000000"-->
+
+    <ImageView
+        android:id="@+id/ImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:background="#ffffff"
+        android:layout_weight="0.97" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login_username_txt"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"/>/>
+
+    <EditText
+        android:id="@+id/EditUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login_password_txt"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"/><![CDATA[/>
+
+    ]]>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/EditPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:background="#ffffff"
+        android:textColor="@color/colorPrimary" />
+
+
+    <Space
+        android:layout_width="269dp"
+        android:layout_height="2dp"
+        android:visibility="invisible" />
+
+
+    <CheckBox
+        android:id="@+id/check"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:checked="true"
+        android:text="@string/login_chbox_txt"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/button2log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1f2228"
+        android:backgroundTint="#1f2228"
+        android:text="@string/login_tgbox_login"
+        android:textColor="#ffffff" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/buttonReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1f2228"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/login_tgbox_registration"
+        android:textColor="#ffffff" />
+
+</LinearLayout>
