@@ -31,6 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
         Button btnLogin = (Button) findViewById(R.id.button2reg2);
         final EditText etUsername = (EditText) findViewById(R.id.regusername);
         final EditText etPassword = (EditText) findViewById(R.id.regpassword);
+        final EditText etEmail = (EditText) findViewById(R.id.regemail);
 
         etUsername.setError(null);
         etPassword.setError(null);
@@ -51,6 +52,13 @@ public class RegisterActivity extends AppCompatActivity {
                     cancel = true;
                     etPassword.requestFocus();
                     etPassword.setError(getResources().getString(R.string.login_invalid_password));
+                    // Toast.makeText(LoginActivity.this, getResources().getString(R.string.login_invalid_password),
+                    // Toast.LENGTH_SHORT).show();
+                }
+                else if (!Validation.isValidEmail(etEmail.getText().toString())) {
+                    cancel = true;
+                    etEmail.requestFocus();
+                    etEmail.setError(getResources().getString(R.string.register_invalid_Email));
                     // Toast.makeText(LoginActivity.this, getResources().getString(R.string.login_invalid_password),
                     // Toast.LENGTH_SHORT).show();
                 }
