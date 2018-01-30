@@ -11,5 +11,6 @@
     <string name="login_tgbox_login">Login</string>
     <string name="login_invalid_username">Acces denied</string>
     <string name="login_invalid_password">Acess denied</string>
+    <string name="register_button_register">Register</string>
 
 </resources>

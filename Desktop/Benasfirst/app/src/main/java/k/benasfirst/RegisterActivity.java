@@ -58,7 +58,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this,
                             "Prisijungimo vardas: " + etUsername.getText().toString() + "\n" +
                                     "Slaptažodis: " + etPassword.getText().toString(), Toast.LENGTH_SHORT).show();
-                    Intent goToSearchActivity = new Intent(RegisterActivity.this, logged.class);
+                    Intent goToSearchActivity = new Intent(RegisterActivity.this, LoginActivity.class);
                     startActivity(goToSearchActivity);
                 }
 
