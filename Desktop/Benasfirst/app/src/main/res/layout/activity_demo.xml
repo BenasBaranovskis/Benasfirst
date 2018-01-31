@@ -71,13 +71,13 @@
 
 
     <CheckBox
-        android:id="@+id/check"
+        android:id="@+id/cbrememberme"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:background="#ffffff"
         android:checked="true"
         android:text="@string/login_chbox_txt"
-        android:textColor="#ffffff" />
+        android:textColor="@color/colorPrimary" />
 
     <Button
         android:id="@+id/button2log"
