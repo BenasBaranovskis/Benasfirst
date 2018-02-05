@@ -87,7 +87,7 @@ public class LoginActivity extends Activity {
                         user.setRemeberMeKeyForLogin(true);
                     }
 
-                    Intent goToSearchActivity = new Intent(LoginActivity.this, logged.class);
+                    Intent goToSearchActivity = new Intent(LoginActivity.this, SearchActivity.class);
                     startActivity(goToSearchActivity);
                 }
 

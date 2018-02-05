@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class logged extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
     public Button but2;
 
     public void init() {
@@ -15,7 +15,7 @@ public class logged extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent reg = new Intent(logged.this,NewTargetActivity .class);
+                Intent reg = new Intent(SearchActivity.this,NewTargetActivity .class);
                 startActivity(reg);
 
 

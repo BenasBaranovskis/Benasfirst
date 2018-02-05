@@ -12,17 +12,106 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/logo"
+        android:background="#ffffff" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.09" />
+
+    <EditText
+        android:id="@+id/newTargetID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="#ffffff"
-        android:layout_weight="0.97" />
+        android:ems="10"
+        android:hint="ID (number)"
+        android:textColorHint="#000000"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.09" />
+
+    <EditText
+        android:id="@+id/newTargetName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="Name"
+        android:textColorHint="#000000"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.08" />
+
+    <EditText
+        android:id="@+id/newTargetHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:hint="Height (metric)"
+        android:textColorHint="#000000" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.08" />
+
+    <EditText
+        android:id="@+id/newTargetWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:hint="Weight (kilo)"
+        android:textColorHint="#000000" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CHOOSE HOSTILITY:"
+        android:textColor="#ffffff"/>
+
+    <RadioButton
+        android:id="@+id/newTargetRb1"
+        android:layout_width="169dp"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:text="Very hostile Tango"
+        android:textColor="#000000" />
+
+    <RadioButton
+        android:id="@+id/newTargetRb2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Middle hostility Tango"
+        android:textColor="#000000"
+        android:background="#ffffff"/>
+
+    <RadioButton
+        android:id="@+id/newTargetRb3"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="Tango Not Hostile"
+        android:textColor="#000000"
+        android:background="#ffffff"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.09" />
 
     <Button
-        android:id="@+id/searchEntries"
+        android:id="@+id/AddEntries"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#1f2228"
         android:backgroundTint="#1f2228"
-        android:textColor="#ffffff"
-        android:text="@string/NewTarget_button_addTarget" />
+        android:text="@string/NewTarget_button_addTarget"
+        android:textColor="#ffffff" />
 
 
 </LinearLayout>
