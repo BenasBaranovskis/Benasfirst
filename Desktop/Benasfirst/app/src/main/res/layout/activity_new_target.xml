@@ -16,21 +16,13 @@
         android:layout_weight="0.97" />
 
     <Button
-        android:id="@+id/btnNewEntry"
+        android:id="@+id/searchEntries"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#1f2228"
         android:backgroundTint="#1f2228"
         android:textColor="#ffffff"
-        android:text="@string/logged_button_new_entry" />
+        android:text="@string/NewTarget_button_addTarget" />
 
-    <Button
-        android:id="@+id/btnSearchTarget"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#1f2228"
-        android:backgroundTint="#1f2228"
-        android:textColor="#ffffff"
-        android:text="@string/logged_button_search"/>
 
 </LinearLayout>

@@ -15,4 +15,7 @@
     <string name="register_invalid_Email">Acess denied</string>
     <string name="register_button_register">Register</string>
 
+    <string name="logged_button_new_entry">New Target</string>
+    <string name="logged_button_search">Search Targets</string>
+    <string name="NewTarget_button_addTarget">Add Target</string>
 </resources>
