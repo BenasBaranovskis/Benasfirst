@@ -3,10 +3,15 @@ package k.benasfirst;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.os.Bundle;
+import android.widget.Spinner;
 
 public class NewTargetActivity extends AppCompatActivity {
+
     public Button but2;
 
     public void init() {
@@ -25,5 +30,10 @@ public class NewTargetActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_target);
             init();
+
+        }
+
+
+
     }
 }

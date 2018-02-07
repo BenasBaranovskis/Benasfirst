@@ -17,5 +17,29 @@
 
     <string name="logged_button_new_entry">New Target</string>
     <string name="logged_button_search">Search Targets</string>
+
     <string name="NewTarget_button_addTarget">Add Target</string>
+    <string name="NewTarget_edText_Name">NAME</string>
+    <string name="NewTarget_edText_height">HEIGHT</string>
+    <string name="NewTarget_edText_weight">WEIGHT</string>
+    <string name="NewTarget_txtView_hostility">CHOOSE TANGO HOSTILITY:</string>
+    <string name="NewTarget_RBHostility_1">VERY HOSTILE TANGO</string>
+    <string name="NewTarget_RBHostility_2">MIDDLE HOSTILITY TANGO</string>
+    <string name="NewTarget_RBHostility_3">NOT HOSTILE TANGO</string>
+    <string name="NewTarget_txtView_WhatToDo">CHOOSE WHAT TO DO:</string>
+    <string name="NewTarget_cbWhatToDo_Kill">KILL TANGO</string>
+    <string name="NewTarget_cbWhatToDo_GatherIntel">GATHER INTEL</string>
+    <string name="NewTarget_cbWhatToDo_Sabotage">SABOTAGE TANGO</string>
+    <string name="NewTarget_spinner_ChooseCar">CHOOSE CAR</string>
+
+    <string-array name="NewTarget_spinner_Cars">
+        <item>Aston Martin DB9</item>
+        <item>Lamborghini Gallardo</item>
+        <item>BMW M3</item>
+        <item>Aston Martin DB7</item>
+    </string-array>
+
+
+
+
 </resources>
