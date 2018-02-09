@@ -8,6 +8,8 @@ import android.content.SharedPreferences;
  */
 
 public class User {
+    private int id;
+    private String userlevel;
     private String username;
     private String password;
     private String email;
@@ -18,9 +20,11 @@ public class User {
     private static final String REMEMBER_ME_KEY = "rememberMe";
 
     private SharedPreferences sharedPreferences;
+    public User() {
 
+    }
 //Skirtas register activity naujam vartotojui registruoti
-    public User(String username, String password, String email) {
+    public User(String userlevel, String username, String password, String email) {
         this.username = username;
         this.password = password;
         this.email = email;
@@ -79,4 +83,30 @@ public class User {
     public void setEmailForRegister(String email) {
         this.email = email;
     }
+    public String getUserlevel() {
+                return userlevel;
+            }
+
+            public void setUserlevel(String userlevel) {
+                this.userlevel = userlevel;
+            }
+
+            public int getId() {
+                return id;
+            }
+
+            public void setId(int id) {
+                this.id = id;
+           }
+    @Override
+    public String toString() {
+                return "User{" +
+                               "id=" + id + '\'' +
+                                "userlevel='" + userlevel + '\'' +
+                                ", username='" + username + '\'' +
+                                ", password='" + password + '\'' +
+                               ", email='" + email + '\'' +
+                                '}';
+            }
 }
+
