@@ -3,10 +3,6 @@ package k.benasfirst;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/**
- * Created by moksleivis on 2018-01-31.
- */
-
 public class User {
     private int id;
     private String userlevel;

@@ -21,7 +21,7 @@ import android.content.Intent;
   RadioButton rbNewTVery, rbNewTMedium, rbNewTNot;
             CheckBox cbkill, cbIntel, cbSabotage;
    Spinner spinner;
-           Pokemonas pokemonas;
+           Target target;
 
           String items[] = {"Aston Martin DB9", "Lamborghini Gallardo", "BMW M3", "Aston Martin DB7"};
 
@@ -85,22 +85,22 @@ import android.content.Intent;
 
                                                                     spinnerText = spinner.getSelectedItem().toString();
 
-                                                                    pokemonas = new Pokemonas();
-                                                            pokemonas.setId(id);
-                                                           pokemonas.setName(name);
-                                                            pokemonas.setHeight(height);
-                                                            pokemonas.setWeight(weight);
-                                                            pokemonas.setToDo(checkboxText);
-                                                            pokemonas.setHostility(rb);
-                                                            pokemonas.setCar(spinnerText);
+                                                                    target = new Target();
+                                                            target.setId(id);
+                                                            target.setName(name);
+                                                            target.setHeight(height);
+                                                            target.setWeight(weight);
+                                                            target.setToDo(checkboxText);
+                                                            target.setHostility(rb);
+                                                            target.setCar(spinnerText);
 
-                                                                    toastMessage("ID: " + pokemonas.getId() + "\n" +
-                                                                                    "Name: " + pokemonas.getName() + "\n" +
-                                                                                    "Weight: " + pokemonas.getWeight() + "\n" +
-                                                                                    "Height: " + pokemonas.getHeight() + "\n" +
-                                                                                    "Hostility: " + pokemonas.getHostility() + "\n" +
-                                                                                    "ToDo: " + pokemonas.getToDo() + "\n" +
-                                                                                    "Car: " + pokemonas.getCar());
+                                                                    toastMessage("ID: " + target.getId() + "\n" +
+                                                                                    "Name: " + target.getName() + "\n" +
+                                                                                    "Weight: " + target.getWeight() + "\n" +
+                                                                                    "Height: " + target.getHeight() + "\n" +
+                                                                                    "Hostility: " + target.getHostility() + "\n" +
+                                                                                    "ToDo: " + target.getToDo() + "\n" +
+                                                                                    "Car: " + target.getCar());
 
                                                                     Intent goToSearchActivity = new Intent(NewTargetActivity.this, SearchActivity.class);
                                                             startActivity(goToSearchActivity);

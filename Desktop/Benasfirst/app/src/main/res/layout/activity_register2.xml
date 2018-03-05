@@ -18,26 +18,41 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="7dp"
         android:layout_weight="0.08" />
 
     <EditText
         android:id="@+id/regusername"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="24dp"
         android:background="#ffffff"
         android:hint="Username"
         android:textColorHint="#000000" />
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.03" />
+        android:layout_height="7dp"
+        android:layout_weight="0.08" />
+
+    <EditText
+        android:id="@+id/regemail"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#000000" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_weight="0.08" />
 
     <EditText
         android:id="@+id/regpassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="24dp"
         android:background="#ffffff"
         android:ems="10"
         android:hint="Password"
@@ -46,22 +61,22 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.03" />
+        android:layout_height="7dp"
+        android:layout_weight="0.08" />
 
     <EditText
-        android:id="@+id/regemail"
+        android:id="@+id/repeatpassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="24dp"
         android:ems="10"
-        android:hint="Email"
-        android:textColorHint="#000000"
         android:background="#ffffff"
-        android:inputType="textEmailAddress" />
+        android:inputType="textPassword"
+        android:hint="Reapeat Password"
+        android:textColorHint="#000000"/>
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="8dp"
         android:layout_weight="0.08" />
 
     <Button

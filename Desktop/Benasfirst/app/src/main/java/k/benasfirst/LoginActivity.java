@@ -83,37 +83,41 @@ public class LoginActivity extends Activity {
                     etPassword.setError(getResources().getString(R.string.login_invalid_password));
                     // Toast.makeText(LoginActivity.this, getResources().getString(R.string.login_invalid_password),
                     // Toast.LENGTH_SHORT).show();
-                }
-                else { // praėjo validaciją, kreipiamės į duomenų bazę
-                                        DatabaseSQLite databaseSQLite = new DatabaseSQLite(getApplicationContext());
+                } else { // praėjo validaciją, kreipiamės į duomenų bazę
+                    DatabaseSQLite databaseSQLite = new DatabaseSQLite(getApplicationContext());
 
-                                                if (databaseSQLite.isValidUser(etUsername.getText().toString(),
-                                                        etPassword.getText().toString())) { // rado vartotoją
-                                                cancel = false;
-                                            } else { // nerado vartotojo
-                                                cancel = true;
-                                                Toast.makeText(LoginActivity.this, "Tokio vartotojo duomenų bazėje nėra",
-                                                                Toast.LENGTH_SHORT).show();
-                                            }
-                if (!cancel) {
-                    Toast.makeText(LoginActivity.this,
-                            "Prisijungimo vardas: " + etUsername.getText().toString() + "\n" +
-                                    "Slaptažodis: " + etPassword.getText().toString(), Toast.LENGTH_SHORT).show();
-                    if(cbRememberMe.isChecked()) {
-                        user.setUsernameForLogin(etUsername.getText().toString());
-                        user.setPasswordForLogin(etPassword.getText().toString());
-                        user.setRemeberMeKeyForLogin(false);
-
-                    }else{
-                        user.setRemeberMeKeyForLogin(true);
+                    if (databaseSQLite.isValidUser(etUsername.getText().toString(), etPassword.getText().toString())) { // rado vartotoją
+                        cancel = false;
+                    } else { // nerado vartotojo
+                        cancel = true;
+                        Toast.makeText(LoginActivity.this, "Tokio vartotojo duomenų bazėje nėra",
+                                Toast.LENGTH_SHORT).show();
                     }
+                    if (!cancel) {
+                        Toast.makeText(LoginActivity.this,
+                                "Prisijungimo vardas: " + etUsername.getText().toString() + "\n" +
+                                        "Slaptažodis: " + etPassword.getText().toString(), Toast.LENGTH_SHORT).show();
+                        if (cbRememberMe.isChecked()) {
 
-                    Intent goToSearchActivity = new Intent(LoginActivity.this, SearchActivity.class);
-                    startActivity(goToSearchActivity);
+                            user.setRemeberMeKeyForLogin(true);
+                        } else {
+                            user.setRemeberMeKeyForLogin(false);
+                        }
+
+                        Intent goToSearchActivity = new Intent(LoginActivity.this, SearchActivity.class);
+                        startActivity(goToSearchActivity);
+                    }
                 }
-
-
             }
-        };
 
+        });
+
+    }
 }
+
+
+
+
+
+
+

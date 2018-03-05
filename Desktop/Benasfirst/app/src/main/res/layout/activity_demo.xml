@@ -88,16 +88,18 @@
         android:text="@string/login_tgbox_login"
         android:textColor="#ffffff" />
 
+
     <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_width="269dp"
+        android:layout_height="2dp"
+        android:background="#ffffff"/>
 
     <Button
         android:id="@+id/buttonReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#1f2228"
-        android:backgroundTint="@color/colorPrimary"
+        android:backgroundTint="#1f2228"
         android:text="@string/login_tgbox_registration"
         android:textColor="#ffffff" />
 

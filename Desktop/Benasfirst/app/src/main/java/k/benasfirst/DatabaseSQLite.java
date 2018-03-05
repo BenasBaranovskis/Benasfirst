@@ -21,6 +21,15 @@ import java.util.List;
     private static final String USER_PASSWORD   = "password";
     private static final String USER_EMAIL      = "email";
 
+        private static final String TABLE_TARGET      = "Targets";
+        private static final String TARGET_ID = "id";
+    private static final String TARGET_NAME = "name";
+    private static final String TARGET_HOSTILITY = "Hostility";
+    private static final String TARGET_TODO   = "To do";
+    private static final String TARGET_CAR  = "Car";
+    private static final String POKEMON_WEIGHT      = "weight";
+    private static final String POKEMON_HEIGHT      = "height";
+
             public DatabaseSQLite(Context context) {
                 super(context, DATABASE_NAME, null, DATABASE_VERSION);
             }
@@ -32,8 +41,18 @@ import java.util.List;
                                 + USER_LEVEL + " TEXT,"
                                 + USER_NAME + " TEXT,"
                                 + USER_PASSWORD + " TEXT,"
-                                + USER_EMAIL + " TEXT," + ")";
+                                + USER_EMAIL + ")";
+                String CREATE_TARGETS_TABLE = "CREATE TABLE " + TABLE_TARGET + "("
+                                        + TARGET_ID + " INTEGER PRIMARY KEY,"
+                                        + TARGET_NAME + " TEXT,"
+                                        + TARGET_HOSTILITY + " TEXT,"
+                                        + TARGET_TODO + " TEXT,"
+                                        + TARGET_CAR + " TEXT,"
+                                        + POKEMON_WEIGHT + " REAL,"
+                                        + POKEMON_HEIGHT + ")";
+
                 db.execSQL(CREATE_USERS_TABLE);
+                db.execSQL(CREATE_TARGETS_TABLE);
             }
 
             @Override
@@ -118,6 +137,89 @@ import java.util.List;
                         // return users list
                                 return users;
             }
+        void addPokemon(Target target) {
+                    SQLiteDatabase db = this.getWritableDatabase();
+
+                            ContentValues values = new ContentValues();
+                    values.put(TARGET_NAME,        target.getName());
+                    values.put(TARGET_HOSTILITY,   target.getHostility());
+                    values.put(TARGET_TODO,   target.getToDo());
+                    values.put(TARGET_CAR,        target.getCar());
+                    values.put(POKEMON_WEIGHT,      target.getWeight());
+                    values.put(POKEMON_HEIGHT,      target.getHeight());
+
+                            // Inserting Row
+                                    db.insert(TABLE_TARGET, null, values);
+
+                            // Closing database connection
+                                    db.close();
+                }
+
+            public List<Target> getAllTargets() {
+                    List<Target> targets = new ArrayList<Target>();
+
+                            // Select All Query
+                                    String selectQuery = "SELECT  * FROM " + TABLE_TARGET;
+
+                            SQLiteDatabase db = this.getWritableDatabase();
+                            Cursor cursor = db.rawQuery(selectQuery, null);
+
+                            // looping through all rows and adding to list
+                                    if (cursor.moveToFirst()) {
+                            do {
+                                    Target target = new Target();
+
+                                target.setId(Integer.parseInt(cursor.getString(0)));
+                                target.setName(cursor.getString(1));
+                                target.setHostility(cursor.getString(2));
+                                target.setToDo(cursor.getString(3));
+                                target.setCar(cursor.getString(4));
+                                target.setWeight(cursor.getDouble(5));
+                                target.setHeight(cursor.getDouble(6));
+
+                                            // adding user to list
+                                                    targets.add(target);
+                                } while (cursor.moveToNext());
+                        }
+
+                            // return pokemonaiSQLite list
+                                    return targets;
+                }
+
+            public List<Target> getTargetByName(String name) {
+                    List<Target> targets = new ArrayList<Target>();
+
+                            SQLiteDatabase db = this.getWritableDatabase();
+
+                            Cursor cursor = db.rawQuery("SELECT * FROM pokemonai WHERE name LIKE '%"+name+"%'", null);
+
+                            // looping through all rows and adding to list
+                                    if (cursor.moveToFirst()) {
+                            do {
+                                    Target target = new Target();
+
+                                target.setId(Integer.parseInt(cursor.getString(0)));
+                                target.setName(cursor.getString(1));
+                                target.setHostility(cursor.getString(2));
+                                target.setToDo(cursor.getString(3));
+                                target.setCar(cursor.getString(4));
+                                target.setWeight(cursor.getDouble(5));
+                                target.setHeight(cursor.getDouble(6));
+
+                                            // adding user to list
+                                                    targets.add(target);
+                                } while (cursor.moveToNext());
+                        }
+
+                            // return pokemonaiSQLite list
+                                    return targets;
+
+                        }
+
+
+
+
+
         public boolean isValidUser(String username, String password){
                     Cursor c = getReadableDatabase().rawQuery(
                                     "SELECT * FROM " + TABLE_USERS + " WHERE "

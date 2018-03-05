@@ -96,6 +96,7 @@
                 android:id="@+id/rbGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <RadioButton
                     android:id="@+id/NewTRB1"
                     android:layout_width="match_parent"
@@ -170,7 +171,8 @@
                 android:layout_height="16dp"
                 android:background="#ffffff"
                 android:textColor="#000000"
-                android:visibility="visible" />
+                android:visibility="visible"
+                android:layout_weight="0.11" />
 
             <Button
                 android:id="@+id/AddEntries"

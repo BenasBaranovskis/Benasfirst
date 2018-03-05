@@ -1,7 +1,7 @@
 package k.benasfirst;
 
 
-public class Pokemonas {
+public class Target {
     private int id;
    private String name;
     private double height;
@@ -10,7 +10,7 @@ public class Pokemonas {
    private String ToDo;
    private String car;
 
-            public Pokemonas(int id, String name, double weight, double height, String hostility, String ToDo, String car) {
+            public Target(int id, String name, double weight, double height, String hostility, String ToDo, String car) {
                 this.id = id;
                 this.name = name;
                 this.weight = weight;
@@ -20,7 +20,7 @@ public class Pokemonas {
                 this.car = car;
             }
 
-            public Pokemonas() {
+            public Target() {
             }
 
             public int getId() {
@@ -77,6 +77,19 @@ public class Pokemonas {
 
             public void setCar(String car) {
                 this.car = car;
+            }
+
+    @Override
+        public String toString() {
+                return "Pokemonas{" +
+                                "id=" + id +
+                                ", name='" + name + '\'' +
+                                ", weight=" + weight +
+                                ", height=" + height +
+                                ", hostility='" + hostility + '\'' +
+                                ", ToDo='" + ToDo + '\'' +
+                                ", car='" + car + '\'' +
+                                '}';
             }
 }
 
