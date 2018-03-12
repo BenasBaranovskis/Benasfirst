@@ -182,6 +182,24 @@
                 android:background="#000000"
                 android:text="@string/NewTarget_button_addTarget"
                 android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/updatebtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.32"
+                android:background="#000000"
+                android:textColor="#ffffff"
+                android:text="@string/NewTarget_button_Update" />
+
+            <Button
+                android:id="@+id/deletebtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.60"
+                android:background="#000000"
+                android:textColor="#ffffff"
+                android:text="@string/NewTarget_button_Delete" />
         </LinearLayout>
     </ScrollView>
 

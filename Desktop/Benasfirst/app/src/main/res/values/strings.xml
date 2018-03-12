@@ -33,6 +33,8 @@
     <string name="NewTarget_cbWhatToDo_GatherIntel">GATHER INTEL</string>
     <string name="NewTarget_cbWhatToDo_Sabotage">SABOTAGE TANGO</string>
     <string name="NewTarget_spinner_ChooseCar">CHOOSE CAR:</string>
+    <string name="NewTarget_button_Update">UPDATE TARGET</string>
+    <string name="NewTarget_button_Delete">DELETE TARGET</string>
 
     <string-array name="NewTarget_spinner_Cars">
         <item>Aston Martin DB9</item>
