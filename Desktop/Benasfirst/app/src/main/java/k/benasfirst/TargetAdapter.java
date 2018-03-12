@@ -63,7 +63,7 @@ public class TargetAdapter {
         }
 
         class MyHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-       TextView tvPavadinimas,tvTipas,tvGalia,tvSavybes;
+
        TextView tvPavadinimas,tvTipas,tvGalia,tvSavybes, tvId;
 
             public MyHolder(View itemView){

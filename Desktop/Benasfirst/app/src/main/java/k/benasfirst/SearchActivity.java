@@ -8,6 +8,7 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,7 +23,7 @@ public class SearchActivity extends AppCompatActivity {
 
     SearchView searchView = null;
 
-    RecyclerView rvPokemonai;
+    RecyclerView rvTargets;
     TargetAdapter targetAdapter;
 
             List<Target> DatabaseSQLite = Collections.emptyList();
@@ -101,10 +102,10 @@ public class SearchActivity extends AppCompatActivity {
         @params list of pokemonai from db
      */
             private void setRecycleView(List<Target> pokemonaiSQLite) {
-                rvPokemonai = (RecyclerView) findViewById(R.id.pokemon_list);
+                rvTargets = (RecyclerView) findViewById(R.id.target_list);
                 TargetAdapter = new TargetAdapter(SearchActivity.this,DatabaseSQLlite);
-               rvPokemonai.setAdapter(targetAdapter);
-                rvPokemonai.setLayoutManager(new LinearLayoutManager(SearchActivity.this));
+               rvTargets.setAdapter(targetAdapter);
+                rvTargets.setLayoutManager(new LinearLayoutManager(SearchActivity.this));
             }
 
     class AsyncFetch extends AsyncTask<String, String, String> {
